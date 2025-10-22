@@ -25,6 +25,10 @@ mainSections = ['news', 'resources', 'showcases']
 
 # googleAnalytics = "G-XXXXXXXXX" 
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [pagination]
   pagerSize = 12
 
