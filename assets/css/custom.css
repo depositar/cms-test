@@ -1,0 +1,8 @@
+#PastEvents .toc a {
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: rgba(var(--color-primary-600), 1);
+  &:is(.dark *) {
+    color: rgba(var(--color-primary-400), 1);
+  }
+}

@@ -1,0 +1,39 @@
+colorScheme = "forest"
+defaultAppearance = "light"
+
+[header]
+layout = "fixed"
+
+[footer]
+showMenu = true
+showCopyright = false
+
+[homepage]
+layout = "profile"
+showRecent = true
+cardView = true
+showRecentItems = 6
+
+[list]
+showBreadcrumbs = true
+showHero = true
+heroStyle = "basic"
+showTableOfContents = true
+groupByYear = false
+cardView = true
+cardViewScreenWidth = false
+constrainItemsWidth = true
+showSummary = true
+
+[article]
+showBreadcrumbs = true
+showTaxonomies = true
+showAuthor = true
+showRelatedContent = true
+relatedContentLimit = 3
+
+[taxonomy]
+showBreadcrumbs = true
+
+[term]
+showBreadcrumbs = true

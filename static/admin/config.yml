@@ -1,0 +1,158 @@
+backend:
+  name: github
+  repo: depositar/cms-test
+
+media_folder: "static/img" # Folder where user uploaded files should go
+public_folder: "/img"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "resources"
+    label: "Resources"
+    folder: "content/resources"
+    media_folder: "/static/img" # Folder where user uploaded files should go
+    public_folder: "/img"
+    path: "{{slug}}/index"
+    create: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Author"
+        name: "summary"
+        widget: "string"
+        default: " "
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        value_field: "title"
+        search_fields: ["title"]
+        multiple: true
+        required: false
+      - label: "Languages"
+        name: "languages"
+        widget: "select"
+        multiple: true
+        options:
+        - { label: "中文", value: "中文" }
+        - { label: "English", value: "English" }
+        default: ["中文"]     
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        hint: "Filename must start with `feature`."
+        pattern: ['^feature.*$',
+          "Filename must start with `feature`"]
+        required: false
+        media_folder: ""
+        choose_url: false
+        media_library: {config: {multiple: false}}
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "showcases"
+    label: "Showcases"
+    folder: "content/showcases"
+    media_folder: "/static/img" # Folder where user uploaded files should go
+    public_folder: "/img"
+    path: "{{slug}}/index"
+    create: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Author"
+        name: "summary"
+        widget: "string"
+        default: " "
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        value_field: "title"
+        search_fields: ["title"]
+        multiple: true
+        required: false
+      - label: "Languages"
+        name: "languages"
+        widget: "select"
+        multiple: true
+        options:
+        - { label: "中文", value: "中文" }
+        - { label: "English", value: "English" }
+        default: ["中文"]   
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        hint: "Filename must start with `feature`."
+        pattern: ['^feature.*$',
+          "Filename must start with `feature`"]
+        required: false
+        media_folder: ""
+        choose_url: false
+        media_library: {config: {multiple: false}}
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    media_folder: "/static/img" # Folder where user uploaded files should go
+    public_folder: "/img"
+    path: "{{slug}}/index"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Author"
+        name: "summary"
+        widget: "string"
+        default: " "
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        value_field: "title"
+        search_fields: ["title"]
+        multiple: true
+        required: false
+      - label: "Languages"
+        name: "languages"
+        widget: "select"
+        multiple: true
+        options:
+        - { label: "中文", value: "中文" }
+        - { label: "English", value: "English" }
+        default: ["中文"]   
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        hint: "Filename must start with `feature`."
+        pattern: ['^feature.*$',
+          "Filename must start with `feature`"]
+        required: false
+        media_folder: ""
+        choose_url: false
+        media_library: {config: {multiple: false}}
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "tags"
+    label: "Tags"
+    folder: "content/tags"
+    path: "{{slug}}/index"
+    create: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
