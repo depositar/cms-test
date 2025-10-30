@@ -9,9 +9,10 @@ collections: # A list of collections the CMS should be able to edit
   - name: "resources"
     label: "Resources"
     folder: "content/resources"
-    media_folder: "/static/img" # Folder where user uploaded files should go
-    public_folder: "/img"
+    media_folder: ""
+    public_folder: ""
     path: "{{slug}}/index"
+    thumbnail: "thumbnail"
     create: true
     fields:
       - label: "Title"
@@ -43,11 +44,10 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
-        hint: "Filename must start with `feature`."
-        pattern: ['^feature.*$',
-          "Filename must start with `feature`"]
+        hint: "Filename must start with `feature` and upload to the entry assets."
+        pattern: ['^feature[^\/]*$', 
+          "Filename must start with `feature` and upload to the entry assets."]
         required: false
-        media_folder: ""
         choose_url: false
         media_library: {config: {multiple: false}}
       - label: "Body"
@@ -56,9 +56,10 @@ collections: # A list of collections the CMS should be able to edit
   - name: "showcases"
     label: "Showcases"
     folder: "content/showcases"
-    media_folder: "/static/img" # Folder where user uploaded files should go
-    public_folder: "/img"
+    media_folder: ""
+    public_folder: ""
     path: "{{slug}}/index"
+    thumbnail: "thumbnail"
     create: true
     fields:
       - label: "Title"
@@ -90,11 +91,10 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
-        hint: "Filename must start with `feature`."
-        pattern: ['^feature.*$',
-          "Filename must start with `feature`"]
+        hint: "Filename must start with `feature` and upload to the entry assets."
+        pattern: ['^feature[^\/]*$', 
+          "Filename must start with `feature` and upload to the entry assets."]
         required: false
-        media_folder: ""
         choose_url: false
         media_library: {config: {multiple: false}}
       - label: "Body"
@@ -103,9 +103,10 @@ collections: # A list of collections the CMS should be able to edit
   - name: "news"
     label: "News"
     folder: "content/news"
-    media_folder: "/static/img" # Folder where user uploaded files should go
-    public_folder: "/img"
+    media_folder: ""
+    public_folder: ""
     path: "{{slug}}/index"
+    thumbnail: "thumbnail"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - label: "Title"
@@ -137,9 +138,9 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
-        hint: "Filename must start with `feature`."
-        pattern: ['^feature.*$',
-          "Filename must start with `feature`"]
+        hint: "Filename must start with `feature` and upload to the entry assets."
+        pattern: ['^feature[^\/]*$', 
+          "Filename must start with `feature` and upload to the entry assets."]
         required: false
         media_folder: ""
         choose_url: false
@@ -150,7 +151,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "tags"
     label: "Tags"
     folder: "content/tags"
-    path: "{{slug}}/index"
+    path: "{{slug}}/_index"
     create: true
     fields:
       - label: "Title"
