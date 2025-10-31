@@ -1,6 +1,6 @@
 backend:
-  name: gitlab
-  repo: tychuang.cs10/cms-test
+  name: github
+  repo: depositar/cms-test
 
 media_folder: "static/img" # Folder where user uploaded files should go
 public_folder: "/img"
