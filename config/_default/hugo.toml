@@ -8,6 +8,7 @@ languageCode = 'zh-tw'
 defaultContentLanguage = 'zh-tw'
 disableLanguages = []
 hasCJKLanguage = true
+timeZone = 'Asia/Taipei'
 
 disablePathToLower = true
 
@@ -24,10 +25,6 @@ enableEmoji = true
 mainSections = ['news', 'resources', 'showcases']
 
 # googleAnalytics = "G-XXXXXXXXX" 
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
 
 [pagination]
   pagerSize = 12

@@ -117,7 +117,6 @@
 
         {{ partial "series/series-closed.html" . }}
         {{ partial "sharing-links.html" . }}
-        {{ partial "related.html" . }}  
       </div>
      
       {{ $translations := .AllTranslations }}
@@ -138,8 +137,6 @@
   
     </section>
   <footer class="pt-8 max-w-prose print:hidden">
-
-    {{ partial "article-pagination.html" . }}
     {{ if .Params.showComments | default (.Site.Params.article.showComments | default false) }}
     {{ if templates.Exists "partials/comments.html" }}
     <div class="pt-3">
