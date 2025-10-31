@@ -24,7 +24,7 @@
         <nav class="flex space-x-3 basis-[20ch] grow-0">
 
             {{ if not .Site.Params.disableTextInHeader | default true }}
-            <a href="{{ "" | relLangURL }}" class="text-base font-bold text-gray-500 hover:text-gray-900">{{
+            <a href="{{ "" | relLangURL }}" class="text-base font-bold text-gray-900">{{
                 .Site.Title | markdownify
                 }}</a>
             {{ end }}
